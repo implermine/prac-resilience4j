@@ -11,6 +11,8 @@ repositories {
 
 ext{
     set('resilience4jVersion', "1.5.0")
+    set('mockitoVersion', "3.+")
+    set('sl4fjVersion', "1.7.36")
 }
 
 dependencies {
@@ -24,6 +26,14 @@ dependencies {
     implementation "io.github.resilience4j:resilience4j-bulkhead:${resilience4jVersion}"
     implementation "io.github.resilience4j:resilience4j-cache:${resilience4jVersion}"
     implementation "io.github.resilience4j:resilience4j-timelimiter:${resilience4jVersion}"
+
+    // mockito
+    implementation "org.mockito:mockito-core:${mockitoVersion}"
+
+    // slf4j
+    implementation "org.slf4j:slf4j-api:${sl4fjVersion}"
+    implementation "org.slf4j:slf4j-simple:${sl4fjVersion}"
+
 }
 
 test {
